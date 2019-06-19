@@ -4,7 +4,7 @@ body {
   background-color: #B37C17;
 }
 #background2 {
-  background-color: #54FFA4;
+  background-color: #7D20B3;
   z-index: -1;
   position: fixed;
   top: 0px;
@@ -27,7 +27,7 @@ h1 div {
 /* user textarea */
 textarea {
     display: block;
-    color: #212121;
+    color: salmon;
     font-size: .8rem; /* duda si usar rem, em o px para tamaño */
     letter-spacing: 1px;
     text-transform: uppercase; /* ver si afecta solo rendering o si afecta directamente los valores */

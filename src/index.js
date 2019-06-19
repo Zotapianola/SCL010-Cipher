@@ -19,12 +19,14 @@ encDecBtn.addEventListener("click", function encodeDecode()
     encode();
     encDecBtn.innerText = "Decodificar";
     magicEye.innerText = "㊀";
+    cssToggler("theme2.css");
     isEncoding = false;
   }
   else {
     decode();
-    magicEye.innerText = "◉";
     encDecBtn.innerText = "Codificar";
+    magicEye.innerText = "◉";
+    cssToggler("theme1.css");
     isEncoding = true;
   }
 });
@@ -47,7 +49,6 @@ function encode ()
   textArea.value = cipher.encode(offset,secretMsg);
 }
 
-
 function decode ()
 {
   // obtiene valores del usuario
@@ -56,4 +57,9 @@ function decode ()
 
   // muestra resultado decodificado
   textArea.value = cipher.decode(offset,secretMsg);
+}
+
+function cssToggler(theme)
+{
+  document.getElementById("themeCSS").setAttribute("href", theme);
 }

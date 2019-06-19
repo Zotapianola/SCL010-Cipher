@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>EyeP</title>
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "theme1.css"/>
+  <div id="background2"></div>
+  <h1><div id="h1Eye">◉</div></h1>
   </head>
+  <div id="surroundingDiv">
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
+      <input type="text" name="key" value="100000" id="userOffset">
+      <button type="button" id="encDecB">Codificar</button>
+      <p>
+        <textarea rows="18" cols="54" id="textarea">Escriba</textarea>
+      </p>
+      <button type="button" id="copyToClpB">Copiar txt</button>
+  </div>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="cipher.js"></script>
   </body>
 </html>

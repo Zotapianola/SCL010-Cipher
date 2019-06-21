@@ -16,6 +16,7 @@ body {
 /* h1 */
 h1 {
   color: salmon;
+  font-size: 3em;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center; /* ubicación temporal */
   letter-spacing: 4px;
@@ -49,13 +50,24 @@ button[type=button] {
   width: 80px;
 }
 #userOffset {
-  color: #212121;
+  color: gray;
+  border-radius: 6px;
+  top: 16px;
+  border-top: none;
+  border-left: none;
+  text-align: center;
   position: relative;
   right: 120px;
 }
 #encDecB {
   position: relative;
+  top: 18px;
   left: 120px;
+}
+#triangle {
+  color: orange;
+  top: -2px;
+  height: 20px;
 }
 
 button {

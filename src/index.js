@@ -1,9 +1,8 @@
-// guardar user input
+// guardar user string y offset
 let secretMsg = "";
-// valor temporal de offset
 let offset;
 
-// textarea de DOM
+// DOM textarea
 const textArea = document.getElementById("textarea");
 
 // bool que chequea si usa encode o decode
@@ -12,21 +11,24 @@ let isEncoding = true;
 // lógica encode/decode
 const encDecBtn = document.getElementById("encDecB");
 const magicEye = document.getElementById("h1Eye");
+const tri = document.getElementById('triangle');
 encDecBtn.addEventListener("click", function encodeDecode()
 {
   if (isEncoding)
   {
     encode();
-    encDecBtn.innerText = "Decodificar";
+    encDecBtn.innerText = "Code";
     magicEye.innerText = "㊀";
     cssToggler("theme2.css");
+    tri.innerText = "▼";
     isEncoding = false;
   }
   else {
     decode();
-    encDecBtn.innerText = "Codificar";
+    encDecBtn.innerText = "Decode";
     magicEye.innerText = "◉";
     cssToggler("theme1.css");
+    tri.innerText = "▲";
     isEncoding = true;
   }
 });

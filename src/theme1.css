@@ -46,9 +46,15 @@ textarea {
 input[type=text] {
   height: 40px;
   width: 80px;
+
 }
-#userOffset {
+
+::placeholder {
   color: salmon;
+}
+
+#user-offset {
+  color: #212121;
   font-size: 0.8em;
   border-radius: 6px;
   top: 16px;
@@ -58,7 +64,7 @@ input[type=text] {
   position: relative;
   right: 120px;
 }
-#encDecB {
+#enc-dec-btn {
   position: relative;
   top: 18px;
   left: 120px;

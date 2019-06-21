@@ -28,7 +28,7 @@ h1 div {
 /* user textarea */
 textarea {
     display: block;
-    color: salmon;
+    color: #212121;
     font-size: .8rem; /* duda si usar rem, em o px para tamaño */
     letter-spacing: 1px;
     text-transform: uppercase; /* ver si afecta solo rendering o si afecta directamente los valores */
@@ -47,7 +47,7 @@ input[type=text] {
   height: 40px;
   width: 80px;
 }
-#userOffset {
+#user-offset {
   color: gray;
   font-size: 0.8em;
   border-radius: 6px;
@@ -58,7 +58,10 @@ input[type=text] {
   position: relative;
   right: 120px;
 }
-#encDecB {
+::placeholder {
+  color: salmon;
+}
+#enc-dec-btn {
   position: relative;
   top: 18px;
   left: 120px;

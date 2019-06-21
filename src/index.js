@@ -3,15 +3,26 @@ let secretMsg = "";
 let offset;
 
 // DOM textarea
-const textArea = document.getElementById("textarea");
+const textArea = document.getElementById("text-area");
 
 // bool que chequea si usa encode o decode
 let isEncoding = true;
 
+// placeholder for empty textarea
+let taPlaceholderMsg;
+function setTAPlaceholder ()
+{
+  taPlaceholderMsg = "1. Enter your #Key \n2. Type your message to "
+  + (isEncoding ? "Encode" : "Decode") + " here \n3. Encode with button";
+  textArea.placeholder = taPlaceholderMsg;
+}
+setTAPlaceholder();
+
 // lógica encode/decode
-const encDecBtn = document.getElementById("encDecB");
-const magicEye = document.getElementById("h1Eye");
+const encDecBtn = document.getElementById("enc-dec-btn");
+const magicEye = document.getElementById("h1-eye");
 const tri = document.getElementById('triangle');
+
 encDecBtn.addEventListener("click", function encodeDecode()
 {
   if (isEncoding)
@@ -22,6 +33,7 @@ encDecBtn.addEventListener("click", function encodeDecode()
     cssToggler("theme2.css");
     tri.innerText = "▼";
     isEncoding = false;
+    setTAPlaceholder();
   }
   else {
     decode();
@@ -30,11 +42,12 @@ encDecBtn.addEventListener("click", function encodeDecode()
     cssToggler("theme1.css");
     tri.innerText = "▲";
     isEncoding = true;
+    setTAPlaceholder();
   }
 });
 
 // lógica botón select/copy text
-const copyBtn = document.getElementById("copyToClpB");
+const copyBtn = document.getElementById("copy-to-clpb-btn");
 copyBtn.addEventListener("click", function copyToClipboard(){
   let copyText = textArea;
   copyText.select();
@@ -44,7 +57,7 @@ copyBtn.addEventListener("click", function copyToClipboard(){
 function encode ()
 {
   // obtiene valores del usuario
-  offset = parseInt(document.getElementById("userOffset").value);
+  offset = parseInt(document.getElementById("user-offset").value);
   secretMsg = textArea.value.toUpperCase();
 
   // muestra resultado decodificado
@@ -54,7 +67,7 @@ function encode ()
 function decode ()
 {
   // obtiene valores del usuario
-  offset = parseInt(document.getElementById("userOffset").value);
+  offset = parseInt(document.getElementById("user-offset").value);
   secretMsg = textArea.value.toUpperCase();
 
   // muestra resultado decodificado

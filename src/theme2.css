@@ -44,13 +44,12 @@ textarea {
 
 /* botones e input */
 input[type=text] {
-    width: 80px;
-}
-button[type=button] {
+  height: 40px;
   width: 80px;
 }
 #userOffset {
   color: gray;
+  font-size: 0.8em;
   border-radius: 6px;
   top: 16px;
   border-top: none;
@@ -72,6 +71,9 @@ button[type=button] {
 
 button {
   color: white;
+  font-size: 0.8em;
+  height: 40px;
+  width: 80px;
   background-color: salmon;
   border-radius: 6px;
   border: 1px solid #ccc;

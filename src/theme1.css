@@ -70,12 +70,11 @@ input[type=text] {
   left: 120px;
 }
 
-#triangle {
+#some-space {
   position: relative;
   height: 20px;
   top: -2px;
   right: 160px;
-  color: orange;
 }
 
 button {

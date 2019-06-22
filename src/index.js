@@ -21,7 +21,6 @@ setTAPlaceholder();
 // lógica encode/decode
 const encDecBtn = document.getElementById("enc-dec-btn");
 const magicEye = document.getElementById("h1-eye");
-const tri = document.getElementById('triangle');
 
 encDecBtn.addEventListener("click", function encodeDecode()
 {
@@ -31,7 +30,6 @@ encDecBtn.addEventListener("click", function encodeDecode()
     encDecBtn.innerText = "Code";
     magicEye.innerText = "㊀";
     cssToggler("theme2.css");
-    tri.innerText = "▼";
     isEncoding = false;
     setTAPlaceholder();
   }
@@ -40,7 +38,6 @@ encDecBtn.addEventListener("click", function encodeDecode()
     encDecBtn.innerText = "Decode";
     magicEye.innerText = "◉";
     cssToggler("theme1.css");
-    tri.innerText = "▲";
     isEncoding = true;
     setTAPlaceholder();
   }

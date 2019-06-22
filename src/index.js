@@ -13,7 +13,7 @@ let taPlaceholderMsg;
 function setTAPlaceholder ()
 {
   taPlaceholderMsg = "1. Enter your #Key \n2. Type your message to "
-  + (isEncoding ? "Encode" : "Decode") + " here \n3. Encode with button";
+  + (isEncoding ? "ENCODE" : "DECODE") + " here \n3. Encode with button";
   textArea.placeholder = taPlaceholderMsg;
 }
 setTAPlaceholder();

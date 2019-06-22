@@ -26,24 +26,45 @@ const magicEye = document.getElementById("h1-eye");
 
 encDecBtn.addEventListener("click", function encodeDecode()
 {
+  // obtiene valores del usuario
+  offset = parseInt(document.getElementById("user-offset").value);
+  secretMsg = textArea.value;
+
   if (isEncoding)
   {
     encode();
-    encDecBtn.innerText = "Code";
-    magicEye.innerText = "㊀";
-    cssToggler("theme2.css");
-    isEncoding = false;
-    setTAPlaceholder();
   }
   else {
     decode();
-    encDecBtn.innerText = "Decode";
-    magicEye.innerText = "◉";
-    cssToggler("theme1.css");
-    isEncoding = true;
-    setTAPlaceholder();
   }
 });
+
+function encode ()
+{
+  // muestra resultado codificado
+  textArea.value = cipher.encode(offset,secretMsg);
+  encDecBtn.innerText = "Code";
+  magicEye.innerText = "㊀";
+  cssToggler("theme2.css");
+  isEncoding = false;
+  setTAPlaceholder();
+}
+
+function decode ()
+{
+  // muestra resultado decodificado
+  textArea.value = cipher.decode(offset,secretMsg);
+  encDecBtn.innerText = "Decode";
+  magicEye.innerText = "◉";
+  cssToggler("theme1.css");
+  isEncoding = true;
+  setTAPlaceholder();
+}
+
+function cssToggler(theme)
+{
+  document.getElementById("themeCSS").setAttribute("href", theme);
+}
 
 // lógica botón select/copy text
 const copyBtn = document.getElementById("copy-to-clpb-btn");
@@ -52,28 +73,3 @@ copyBtn.addEventListener("click", function copyToClipboard(){
   copyText.select();
   document.execCommand("copy");
 });
-
-function encode ()
-{
-  // obtiene valores del usuario
-  offset = parseInt(document.getElementById("user-offset").value);
-  secretMsg = textArea.value;
-
-  // muestra resultado decodificado
-  textArea.value = cipher.encode(offset,secretMsg);
-}
-
-function decode ()
-{
-  // obtiene valores del usuario
-  offset = parseInt(document.getElementById("user-offset").value);
-  secretMsg = textArea.value;
-
-  // muestra resultado decodificado
-  textArea.value = cipher.decode(offset,secretMsg);
-}
-
-function cssToggler(theme)
-{
-  document.getElementById("themeCSS").setAttribute("href", theme);
-}

@@ -8,7 +8,7 @@ const textArea = document.getElementById("text-area");
 // bool que chequea si usa encode o decode
 let isEncoding = true;
 
-// placeholder for empty textarea
+// placeholder para textarea vacía
 let taPlaceholderMsg;
 function setTAPlaceholder ()
 {
@@ -55,7 +55,7 @@ function encode ()
 {
   // obtiene valores del usuario
   offset = parseInt(document.getElementById("user-offset").value);
-  secretMsg = textArea.value.toUpperCase();
+  secretMsg = textArea.value;
 
   // muestra resultado decodificado
   textArea.value = cipher.encode(offset,secretMsg);
@@ -65,7 +65,7 @@ function decode ()
 {
   // obtiene valores del usuario
   offset = parseInt(document.getElementById("user-offset").value);
-  secretMsg = textArea.value.toUpperCase();
+  secretMsg = textArea.value;
 
   // muestra resultado decodificado
   textArea.value = cipher.decode(offset,secretMsg);

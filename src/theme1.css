@@ -31,7 +31,6 @@ textarea {
     color: #212121;
     font-size: .8rem; /* duda si usar rem, em o px para tamaño */
     letter-spacing: 1px;
-    text-transform: uppercase; /* ver si afecta solo rendering o si afecta directamente los valores */
     margin-left: auto;
     margin-right: auto;
     padding: 8px;
@@ -74,7 +73,6 @@ input[type=text] {
   position: relative;
   height: 20px;
   top: -2px;
-  right: 160px;
 }
 
 button {

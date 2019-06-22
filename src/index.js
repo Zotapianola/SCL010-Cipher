@@ -10,10 +10,12 @@ let isEncoding = true;
 
 // placeholder para textarea vacía
 let taPlaceholderMsg;
+let encDecMsg;
 function setTAPlaceholder ()
 {
+  encDecMsg = (isEncoding ? "ENCODE" : "DECODE");
   taPlaceholderMsg = "1. Enter your #Key \n2. Type your message to "
-  + (isEncoding ? "ENCODE" : "DECODE") + " here \n3. Encode with button";
+  + encDecMsg + " here \n3. " + encDecMsg + " with button";
   textArea.placeholder = taPlaceholderMsg;
 }
 setTAPlaceholder();

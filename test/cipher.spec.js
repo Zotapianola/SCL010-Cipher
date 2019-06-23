@@ -9,11 +9,9 @@ describe('cipher', () => {
     it('debería ser una función', () => {
       assert.equal(typeof cipher.encode, 'function');
     });
-
     it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33', () => {
       assert.equal(cipher.encode(33, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"), "HIJKLMNOPQRSTUVWXYZABCDEFG");
     });
-
     it('debería retornar "hijklmnopqrstuvwxyzabcdefg" para "abcefghijklmnopqrstuvwxyz" con offset 33', () => {
       assert.equal(cipher.encode(33, "abcdefghijklmnopqrstuvwxyz"), "hijklmnopqrstuvwxyzabcdefg");
     });
@@ -31,6 +29,9 @@ describe('cipher', () => {
     });
     it('debería retornar "RozbdFgnrsBnzrssnBnzrs4" para "Space Ghost Coast to Coast!" con offset de 467', () => {
       assert.equal(cipher.encode(467, "Space Ghost Coast to Coast!"), "RozbdFgnrsBnzrssnBnzrs4");
+    });
+    it('debería retornar "zabcdef" para "abcdefg" con offset de -1', () => {
+      assert.equal(cipher.decode(1, "abcdefg"), "zabcdef");
     });
   });
 
@@ -54,7 +55,9 @@ describe('cipher', () => {
     it('debería retornar "Space Ghost Coast to Coast!" para "RozbdFgnrsBnzrssnBnzrs4" con offset de 467', () => {
       assert.equal(cipher.decode(467, "RozbdFgnrsBnzrssnBnzrs4"), "Space Ghost Coast to Coast!");
     });
-
+    it('debería retornar "abcdefg" para "zabcdef" con offset de -1', () => {
+      assert.equal(cipher.encode(1, "zabcdef"), "abcdefg");
+    });
   });
 
 });

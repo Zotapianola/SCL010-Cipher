@@ -41,8 +41,15 @@ encDecBtn.addEventListener("click", function encodeDecode()
 
 function encode ()
 {
-  // muestra resultado codificado
-  textArea.value = cipher.encode(offset,secretMsg);
+  if (offset > 0)
+  {
+    textArea.value = cipher.encode(offset,secretMsg);
+  }
+  else if (offset < 0)
+  {
+    offset *= -1;
+    textArea.value = cipher.decode(offset,secretMsg);
+  }
   encDecBtn.innerText = "Decode";
   magicEye.innerText = "㊀";
   cssToggler("theme2.css");
@@ -52,8 +59,15 @@ function encode ()
 
 function decode ()
 {
-  // muestra resultado decodificado
-  textArea.value = cipher.decode(offset,secretMsg);
+  if (offset > 0)
+  {
+    textArea.value = cipher.decode(offset,secretMsg);
+  }
+  else if (offset < 0)
+  {
+    offset *= -1;
+    textArea.value = cipher.encode(offset,secretMsg);
+  }
   encDecBtn.innerText = "Encode";
   magicEye.innerText = "◉";
   cssToggler("theme1.css");

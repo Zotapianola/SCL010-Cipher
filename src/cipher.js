@@ -36,9 +36,15 @@ window.cipher = {
         newPosition = (charNum - 33 + offset) % 32 + 33;
       }
       // barra espaciadora
+      // a) offset positivo
       else if (charNum == 32)
       {
         newPosition = 128;
+      }
+      // b) offset negativo
+      else if (charNum == 128)
+      {
+        newPosition = 32;
       }
       secretMsg[i] = String.fromCharCode(newPosition);
     }
@@ -72,9 +78,15 @@ window.cipher = {
         newPosition = (charNum - 64 - offset) % 32 + 64;
       }
       // barra espaciadora
+      // a) offset positivo
       else if (charNum == 128)
       {
         newPosition = 32;
+      }
+      // b) offset negativo
+      else if (charNum == 32)
+      {
+        newPosition = 128;
       }
       secretMsg[i] = String.fromCharCode(newPosition);
     }

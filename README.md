@@ -1,17 +1,18 @@
 #### Eye-P: Un paso más allá para la protección de la Propiedad Intelectual
 
-`Eye-P` es una herramienta de **codificación y decodificación de mensajes**, orientada a trabajadores y directivos de empresas independientes de desarrollo de video juegos de mediano tamaño, a punto de dar un salto importante al trabajar con una propiedad intelectual delicada, con requerimientos especiales de confidencialidad.
+Eye-P es una herramienta de codificación y decodificación de mensajes, orientada a trabajadores y directivos de empresas de desarrollo de videojuegos, que trabajan con una propiedad intelectual delicada, con requerimientos especiales de confidencialidad.
 
-_IP_ ("Intelectual Property") es el término que se usa a nivel internacional para hablar de material original, perteneciente a una empresa, grupo o persona.  En el mundo de los video juegos se usa además para referirse a franquicias, personajes o universos creativos  (nuevos o antiguos).
+IP ("Intelectual Property") es el término que se usa a nivel internacional para hablar de material original, perteneciente a una empresa, grupo o persona.  En el mundo de los videojuegos se usa además para referirse a franquicias, personajes o universos creativos  (nuevos o antiguos).
 
 Durante el proceso de desarrollo de un video juego, cualquier tipo de información transmitida o filtrada a inversionistas, público general o prensa puede afectar las ventas y desempeño del producto final en el mercado debido a la expectativa de la gente.
 
-Cuando una empresa de mediano tamaño firma un contrato para trabajar con una IP querida y conocida, no solo debe cuidarse de no divulgar información confidencial del proyecto al público, sino que además firma contratos de no divulgación de información (NDA: Non-Disclosure Agreements) que les prohíben dar detalles relevantes de este mismo. Entendiendo lo anterior, cualquier tipo de filtración casual puede poner en jaque no solo las ventas del proyecto, sino que además podría poner en jaque los planes de crecimiento de la empresa.
+Aquí es donde entra Eye-P.  Es una web app fácil de usar que complementa el uso de los NDA (Non-Disclosure Agreements) a la hora de proteger información particular.
 
-Los NDA dependen de la capacidad de cada involucrado en el proyecto de guardar silencio. Debido a la gran cantidad de involucrados, esto se vuelve difícil mientras más tiempo y personas trabajen en la organización.
+Para utilizarla, solo se debe ingresar a su página (agregar página) https://zotapianola.github.io/SCL010-Cipher/src/index.html , ingresar el código numérico en la sección superior derecha y luego poner el mensaje a encriptar/decriptar en el cuadro del centro.  Es necesario poner OJO en que la página esté en el modo adecuado (Code/Encode) antes de proceder.
 
-Si esta información debe ser protegida a toda costa ¿por qué no dar un paso más allá y encriptar las comunicaciones internas con los equipos de trabajo involucrados?
+Como se trata de una aplicación web para empresas internacionales o con equipos internacionales, se optó por utilizar el INGLÉS como lenguaje de trabajo.
 
+Las instrucciones de uso están visibles al momento de ingresar a la web app y cada vez que los campos de clave (#KEY) y texto estén vacíos, para facilitar la mejor comprensión de la aplicación. Finalmente, tras codificar o decodificar, el usuario puede copiar manualmente el texto o hacerlo con el botón "Copy text" que selecciona y copia todo a portapapeles. Esto permitirá pegar el texto en cualquier aplicación de texto o sistema de mensajería con facilidad.
 ---
 
 Usuarios: miembros de una empresa de videojuegos que trabaja con información confidencial y propiedad intelectual de otras empresas.
@@ -21,22 +22,42 @@ Objetivos de los usuarios: proteger información confidencial de proyectos utili
 Problemas que resuelve la aplicación: se complementa con los sistemas actuales de protección de información confidencial de las empresas de videojuego. Facilita el cumplimiento de los términos establecidos en el NDA.
 
 ---
-Proceso de diseño UX
-- Ideación
+Proceso de desarrollo UX
+
 1. Se identificó el problema a solucionar
-(agregar artículos sobre filtraciones de info en videojuegos y cómo afectan las ventas)
+
+"Red Dead Redemption 2 Leak Cost Gaming Site £1 Million After Settlement"
+https://screenrant.com/red-dead-redemption-2-leak/
+
+"No Man's Leak: The Polarizing Effects of Game Leaks"
+https://blackshellmedia.com/2016/08/12/no-mans-leak-polarizing-effects-game-leaks/
+
+Assessing The Impact Of Leaks In The Games Industry
+https://www.gamerevolution.com/features/13950-assessing-the-impact-of-leaks-in-the-games-industry
+
 2. Se generó un sistema de encriptación/decriptación de mensajes
+
 3. Se identificaron los perfiles de usuarios potenciales
+Empresas internacionales de videojuegos que trabajen con propiedad intelectual que genera gran expectativa.
 
-- Prototipado (sketching)
 4. Se crearon primeros bocetos/sketches de posible interfaz
-5. Tras una primera ronda de feedbacks con personas cercanas, se simplificó la aplicación y se creó el primer wireframe sin colores
-6. Luego de investigar la paleta de colores más adecuada, se probó el primer mockup
 
-- Testeo e Iteración
+
+
+5. Tras una primera ronda de feedbacks con personas cercanas, se simplificó la aplicación y se creó el primer wireframe sin colores
+
+
+
+6. Luego de investigar una paleta de colores más adecuada, se probó el primer mockup
+
+
 7. Tras recibir feedback de pares del mockup, se hizo correcciones y se procedió a crear el primero prototipo corrigiendo errores por ejemplo de interactividad y legibilidad del producto que obstaculizaban la correcta interpretación de sus funciones
+
 8. El producto fue probado por 2 usuarios target para dar últimos detalles de la aplicación
-9. La aplicación fue aprobada y subida
+9. La aplicación fue aprobada y subida, recibiendo nuevo feedback, a implimentarse en un siguiente sprint 1
+
+Conclusiones e insights alcanzados:
+
 
 #### Scripts / Archivos
 

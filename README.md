@@ -1,4 +1,4 @@
-#### Eye-P: Un paso más allá para la protección de la Propiedad Intelectual
+# Eye-P: Un paso más allá para la protección de la Propiedad Intelectual
 
 Eye-P es una herramienta de codificación y decodificación de mensajes, orientada a trabajadores y directivos de empresas de desarrollo de videojuegos, que trabajan con una propiedad intelectual delicada, con requerimientos especiales de confidencialidad.
 

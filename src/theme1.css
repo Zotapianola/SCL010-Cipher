@@ -18,7 +18,7 @@ h1 {
   color: salmon;
   font-size: 3em;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center; /* ubicación temporal */
+  text-align: center;
   letter-spacing: 4px;
 }
 h1 div {
@@ -29,7 +29,7 @@ h1 div {
 textarea {
     display: block;
     color: #212121;
-    font-size: .8rem; /* duda si usar rem, em o px para tamaño */
+    font-size: .8rem;
     letter-spacing: 1px;
     margin-left: auto;
     margin-right: auto;
@@ -41,18 +41,10 @@ textarea {
     resize: none;
 }
 
-/* botones e input */
+/* input offset y botones */
 input[type=text] {
   height: 40px;
   width: 80px;
-
-}
-
-::placeholder {
-  color: salmon;
-}
-
-#user-offset {
   color: #212121;
   font-size: 0.8em;
   border-radius: 6px;
@@ -63,16 +55,14 @@ input[type=text] {
   position: relative;
   right: 120px;
 }
+::placeholder {
+  color: salmon;
+}
+
 #enc-dec-btn {
   position: relative;
   top: 18px;
   left: 120px;
-}
-
-#some-space {
-  position: relative;
-  height: 20px;
-  top: -2px;
 }
 
 button {
@@ -86,8 +76,14 @@ button {
   box-shadow: 0.5px 0.5px 0.5px #999;
   transition-duration: 0.15s;
 }
-
 button:hover {
   background-color: #7D20B3;
   color: gray;
+}
+
+/* espacio vacío que antes contenía algo y aún no retiro porque mantiene el orden */
+#some-space {
+  position: relative;
+  height: 20px;
+  top: -2px;
 }

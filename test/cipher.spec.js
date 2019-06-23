@@ -59,5 +59,4 @@ describe('cipher', () => {
       assert.equal(cipher.encode(1, "zabcdef"), "abcdefg");
     });
   });
-
 });

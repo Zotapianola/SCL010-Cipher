@@ -26,7 +26,6 @@ const magicEye = document.getElementById("h1-eye");
 
 encDecBtn.addEventListener("click", function encodeDecode()
 {
-  // obtiene valores del usuario
   offset = parseInt(document.getElementById("user-offset").value);
   secretMsg = textArea.value;
 

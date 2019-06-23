@@ -73,7 +73,7 @@ El feedback entregado es el siguiente:
 	- No es tan claro que la llave/clave a usar ( #KEY ) debe ser solo numérica
 	- La paleta de colores es confusa y no convence
 	- Hay problemas para mostrar los elementos de la página correctamente (el usuario adjunta una imagen de cómo se ve en su computador)
-	- Actualmente exiten aplicaciones similares de mayor complejidad, como por ejemplo la PGA encryption
+	- Actualmente existen aplicaciones similares de mayor complejidad, como por ejemplo la PGA encryption
 
 [![User image](https://zotapianola.github.io/SCL010-Cipher/img/user.png "User image")](https://zotapianola.github.io/SCL010-Cipher/img/user.png "User image")
 

@@ -43,7 +43,7 @@ function encode ()
 {
   // muestra resultado codificado
   textArea.value = cipher.encode(offset,secretMsg);
-  encDecBtn.innerText = "Code";
+  encDecBtn.innerText = "Decode";
   magicEye.innerText = "㊀";
   cssToggler("theme2.css");
   isEncoding = false;
@@ -54,7 +54,7 @@ function decode ()
 {
   // muestra resultado decodificado
   textArea.value = cipher.decode(offset,secretMsg);
-  encDecBtn.innerText = "Decode";
+  encDecBtn.innerText = "Encode";
   magicEye.innerText = "◉";
   cssToggler("theme1.css");
   isEncoding = true;

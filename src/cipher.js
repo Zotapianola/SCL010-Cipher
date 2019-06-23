@@ -5,46 +5,79 @@ window.cipher = {
     // desmembra string y lo transforma en Array
     secretMsg = secretMsg.split('');
     let newPosition;
+    let charNum;
 
     // por cada vuelta, muestra última letra ya desplazada
     for (let i = 0; i < secretMsg.length; i++)
     {
-      if (secretMsg[i].charCodeAt() >= 65 && secretMsg[i].charCodeAt() <= 90)
+      charNum = secretMsg[i].charCodeAt();
+      // mayúsculas
+      if (charNum >= 65 && charNum <= 90)
       {
-          newPosition = (secretMsg[i].charCodeAt() - 65 + offset) % 26 + 65;
+          newPosition = (charNum - 65 + offset) % 26 + 65;
       }
-      else if(secretMsg[i].charCodeAt() >= 97 && secretMsg[i].charCodeAt() <= 122)
+      // minúsculas
+      else if (charNum >= 97 && charNum <= 122)
       {
-          newPosition = (secretMsg[i].charCodeAt() - 97 + offset) % 26 + 97;
+          newPosition = (charNum - 97 + offset) % 26 + 97;
+      }
+      // "Ñ" por "N"
+      else if (charNum == 209)
+      {
+        newPosition = (78 - 65 + offset) % 26 + 65;
+      }
+      // "ñ" por "n"
+      else if (charNum == 241)
+      {
+        newPosition = (110 - 97 + offset) % 26 + 97;
+      }
+      // números y algunos caracteres raros
+      else if (charNum >= 33 && charNum <= 64){
+        newPosition = (charNum - 33 + offset) % 32 + 33;
+      }
+      // barra espaciadora
+      else if (charNum == 32)
+      {
+        newPosition = 128;
       }
       secretMsg[i] = String.fromCharCode(newPosition);
     }
     // juntar de nuevo
     secretMsg = secretMsg.join('');
     return secretMsg;
-
-
   },
   decode: (offset,secretMsg) => {
-    let newPosition;
-
     // desmembra string y lo transforma en Array
     secretMsg = secretMsg.split('');
+
+    let newPosition;
+    let charNum;
 
     // por cada vuelta, muestra última letra ya desplazada
     for (let i = 0; i < secretMsg.length; i++)
     {
-      if (secretMsg[i].charCodeAt() >= 65 && secretMsg[i].charCodeAt() <= 90)
+      charNum = secretMsg[i].charCodeAt();
+      // mayúsculas
+      if (charNum >= 65 && charNum <= 90)
       {
-          newPosition = (secretMsg[i].charCodeAt() - 90 - offset) % 26 + 90;
+          newPosition = (charNum - 90 - offset) % 26 + 90;
       }
-      else if (secretMsg[i].charCodeAt() >= 97 && secretMsg[i].charCodeAt() <= 122)
+      // minúsculas
+      else if (charNum >= 97 && charNum <= 122)
       {
-        newPosition = (secretMsg[i].charCodeAt() - 122 - offset) % 26 + 122;
+        newPosition = (charNum - 122 - offset) % 26 + 122;
+      }
+      // números y algunos caracteres raros
+      else if (charNum >= 33 && charNum <= 64){
+        newPosition = (charNum - 64 - offset) % 32 + 64;
+      }
+      // barra espaciadora
+      else if (charNum == 128)
+      {
+        newPosition = 32;
       }
       secretMsg[i] = String.fromCharCode(newPosition);
     }
-    // juntar de nuevo
     secretMsg = secretMsg.join('');
     return secretMsg;
   }
